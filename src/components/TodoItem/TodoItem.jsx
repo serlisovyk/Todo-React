@@ -1,4 +1,3 @@
-import React from 'react'
 import cn from 'classnames'
 import CheckBox from '../CheckBox/CheckBox'
 import TodoItemControl from '../TodoItemControl/TodoItemControl'

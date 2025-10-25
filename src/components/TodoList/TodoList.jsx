@@ -13,7 +13,7 @@ export default function TodoList({
       {todos.length === 0 ? (
         <p className="text-center text-gray-400 text-lg">No tasks yet</p>
       ) : (
-        todos.map(todo =>
+        todos.map((todo) =>
           todo.isEditing ? (
             <EditTodo key={todo.id} todo={todo} handleEditTask={handleEditTask} />
           ) : (

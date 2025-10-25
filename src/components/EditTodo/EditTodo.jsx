@@ -1,23 +1,22 @@
 import { useState } from 'react'
 import { FaPen } from 'react-icons/fa'
 
-let InputStyle = false
+let inputStyle = false
 
 export default function EditTodo({ todo, handleEditTask }) {
   const [value, setValue] = useState(todo.title)
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
 
     handleEditTask(value, todo.id)
   }
-  console.log(InputStyle)
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     if (e.target.value) {
       setValue(e.target.value)
     } else {
-      InputStyle = true
+      inputStyle = true
     }
   }
 
@@ -25,7 +24,7 @@ export default function EditTodo({ todo, handleEditTask }) {
     <form
       onSubmit={handleSubmit}
       className={`flex items-center gap-1 justify-between rounded-2xl ${
-        InputStyle ? 'border-red-600' : 'border-gray-800'
+        inputStyle ? 'border-red-600' : 'border-gray-800'
       } border-2 p-5 w-1/2 mb-4`}
     >
       <label htmlFor="updateTask"></label>

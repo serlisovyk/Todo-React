@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 export default function CreateTodoField({ handleAddTodo }) {
   const [title, setTitle] = useState('')
@@ -9,7 +9,7 @@ export default function CreateTodoField({ handleAddTodo }) {
     setTitle('')
   }
 
-  const handleChangeTitle = e => setTitle(e.target.value)
+  const handleChangeTitle = (e) => setTitle(e.target.value)
 
   return (
     <form
